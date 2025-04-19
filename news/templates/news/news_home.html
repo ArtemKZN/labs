@@ -1,0 +1,33 @@
+{% extends "labssite/layout.html" %}
+{% block title %}Новости{% endblock title %}
+{% block content %}
+    <div class="features">
+        <h1>Новости</h1>
+
+
+        {% if news %}
+        {% for el in news %}
+            <div id='alert' class="alert"> 
+                <h3>{{ el.title }} </h3>
+                <p>{{ el.anons }} </p>
+                <p>{{ el.full_text}}</p>
+            </div>
+            
+        {% endfor %}
+
+        {% else %}
+            <p>Новостей нет</p>
+        
+        {% endif %}
+        
+
+       
+
+
+    </div>
+    
+
+    {% endblock content %}
+{% block aside %}
+
+{% endblock aside %}
